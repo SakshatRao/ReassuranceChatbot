@@ -1,3 +1,5 @@
+NL_to_SQL/glove/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
