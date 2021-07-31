@@ -175,6 +175,7 @@ class CategoryInitializer:
     def extract_table_info(self):
         info=self.schema_content.split('DROP TABLE IF EXISTS ')[1:]
         info=[x.split('CREATE TABLE ')[1] for x in info]
+        info=[x.split('INSERT INTO')[0] for x in info]
         info=[re.findall(r'`[^`]*` ',x) for x in info]
         info=[[y[1:-2] for y in x] for x in info]
         self.table_info=dict([(x[0],x[1:]) for x in info])
@@ -196,31 +197,15 @@ class CategoryInitializer:
         table_cats=[self.level2_map[firstWord_map[x]] for x in self.tables]
 
         self.cat_descr_map={
-            'academics':[
-                'academic','certificate','branch','grade','phd','course','registration','exam',
-                'subject','assignment','score','class','timing','batch','semester'
+            'owners':[
+                'owner','customer','person','apartment','gender','family', 'sold'
             ],
-            'admission':[
-                'admission','document','withdraw'
+            'apartments':[
+                'apartment','room','carpet', 'area', 'sold', 'floor', 'house', 'home', 'building', 'housing'
             ],
-            'calendar and event management':[
-                'calendar','event','subscription'
+            'payments':[
+                'payment','amount','paid', 'installment', 'due', 'money', 'finance', 'buy'
             ],
-            'feedback':[
-                'feedback','question','response','suggestion','complaint'
-            ],
-            'finance':[
-                'finance','client','fee','transaction','approve','payroll','receipt'
-            ],
-            'infrastructure':[
-                'hostel','comment','room','guest','book','location'
-            ],
-            'placement':[
-                'placement','review','company','job','recruitment','schedule'
-            ],
-            'sports':[
-                'sport','team','captain','member'
-            ]
         }
 
         for cat in self.cat_descr_map:
@@ -344,6 +329,7 @@ class TablePredictor:
     def extract_table_info(self):
         info=self.schema_content.split('DROP TABLE IF EXISTS ')[1:]
         info=[x.split('CREATE TABLE ')[1] for x in info]
+        info=[x.split('INSERT INTO')[0] for x in info]
         title_info=[re.findall(r'`[^`]*` ',x) for x in info]
         title_info = [x[0][1:-2] for x in title_info]
         content_info = [re.findall(r'`[^`]*` [^ ]*',x) for x in info]
@@ -432,71 +418,9 @@ class Model:
         schema_content=schema_file.read()
 
         level2_map={
-            'academic':'academics',
-            'active':'others',
-            'activities':'others',
-            'activity':'others',
-            'admission':'admission',
-            'alumni':'others',
-            'ar':'others',
-            'archived':'academics',
-            'assignments':'academics',
-            'attendance':'academics',
-            'batches':'academics',
-            'bechde':'others',
-            'branches':'academics',
-            'cems':'calendar and event management',
-            'chats':'others',
-            'ckeditor':'others',
-            'class':'academics',
-            'countries':'others',
-            'course':'academics',
-            'courses':'academics',
-            'delayed':'others',
-            'designation':'others',
-            'employees':'others',
-            'exam':'academics',
-            'feedback':'feedback',
-            'feedbacks':'feedback',
-            'finance':'finance',
-            'form':'others',
-            'forum':'others',
-            'general':'others',
-            'guardians':'others',
-            'gyan':'placement',
-            'hostel':'infrastructure',
-            'hostels':'infrastructure',
-            'infrastructure':'infrastructure',
-            'library':'others',
-            'mailing':'others',
-            'network':'others',
-            'news':'others',
-            'nitkconfigurations':'others',
-            'no':'finance',
-            'notification':'others',
-            'oauth':'others',
-            'payroll':'finance',
-            'permissions':'others',
-            'person':'others',
-            'placement':'placement',
-            'pre':'academics',
-            'prereg':'academics',
-            'questions':'others',
-            'receipts':'finance',
-            'role':'others',
-            'roles':'others',
-            'schema':'others',
-            'sessions':'others',
-            'slots':'others',
-            'specialisations':'others',
-            'sports':'sports',
-            'student':'academics',
-            'students':'academics',
-            'subjects':'academics',
-            'suggestions':'feedback',
-            'users':'others',
-            'utility':'others',
-            'weekdays':'others'
+            'owners':'owners',
+            'apartments':'apartments',
+            'payments':'payments',
         }
 
         type_cats = ['int', 'char', 'text', 'datetime', 'decimal']

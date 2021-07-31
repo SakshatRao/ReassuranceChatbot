@@ -81,19 +81,24 @@ class NL2SQL:
                         raw_q_seq, raw_col_seq, self.TEST_ENTRY)[0]
                 st = ed
 
+            def fill_spaces(text):
+                return '_'.join(text.split(' '))
+            
             agg = pred_queries['agg']
             sel = pred_queries['sel']
             cond = pred_queries['conds']
             final_sql = 'SELECT '
             if(agg == 0):
-                final_sql += table + "." + header[sel]
+                final_sql += fill_spaces(table) + "." + fill_spaces(header[sel])
             else:
-                final_sql += self.agg_ops[agg] + "(" + table + "." + header[sel] + ")"
+                final_sql += fill_spaces(self.agg_ops[agg]) + "(" + fill_spaces(table) + "." + fill_spaces(header[sel]) + ")"
+            final_sql += " FROM "
+            final_sql += fill_spaces(table)
             if(len(cond) != 0):
                 final_sql += " WHERE "
-                final_sql += table + "." + header[cond[0][0]] + " " + self.cond_ops[cond[0][1]] + " " + cond[0][2]
+                final_sql += fill_spaces(table) + "." + fill_spaces(header[cond[0][0]]) + fill_spaces(self.cond_ops[cond[0][1]]) + '"' + fill_spaces(cond[0][2]) + '"'
                 for cond_i in cond[1:]:
                     final_sql += " & "
-                    final_sql += table + "." + header[cond_i[0]] + " " + self.cond_ops[cond_i[1]] + " " + cond_i[2]
+                    final_sql += fill_spaces(table) + "." + fill_spaces(header[cond_i[0]]) + fill_spaces(self.cond_ops[cond_i[1]]) + '"' + fill_spaces(cond_i[2]) + '"'
             sqls.append(final_sql)
         return sqls

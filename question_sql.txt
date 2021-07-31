@@ -1,0 +1,2 @@
+SELECT COUNT(apartments.carpet_area) FROM apartments WHERE apartments.name="jaisukh"
+*
