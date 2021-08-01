@@ -1,2 +1,3 @@
-SELECT COUNT(apartments.carpet_area) FROM apartments WHERE apartments.name="jaisukh"
+SELECT payments.due_date FROM payments WHERE payments.amount_paid="sakshat"
+SELECT apartments.name FROM apartments WHERE apartments.number_of_rooms="sakshat"
 *

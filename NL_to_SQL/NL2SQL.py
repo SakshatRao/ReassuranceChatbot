@@ -101,4 +101,7 @@ class NL2SQL:
                     final_sql += " & "
                     final_sql += fill_spaces(table) + "." + fill_spaces(header[cond_i[0]]) + fill_spaces(self.cond_ops[cond_i[1]]) + '"' + fill_spaces(cond_i[2]) + '"'
             sqls.append(final_sql)
+
+            with open('../question_info.txt', 'a') as write_file:
+                write_file.write(ques + " = " + table)
         return sqls

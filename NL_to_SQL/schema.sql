@@ -1,338 +1,41 @@
 DROP DATABASE IF EXISTS sample_database;
 CREATE DATABASE sample_database;
 USE sample_database;
-
-DROP TABLE IF EXISTS `owners`;
-
-CREATE TABLE `owners` (
-  `name` varchar(255) default NULL,
-  `age` mediumint default NULL,
-  `married` varchar(255) default NULL,
-  `gender` varchar(255) default NULL,
-  `nationality` varchar(100) default NULL,
-  `apartment_number` mediumint
-);
-
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("atma",24,"yes","male","india",1);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("prerana",52,"yes","male","india",2);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("dheer",61,"yes","female","india",3);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("devendra",47,"yes","male","india",4);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("nischith",25,"yes","female","india",5);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("tabassum",55,"no","male","india",6);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("riddhi",61,"no","female","india",7);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("adikavi",63,"no","male","india",8);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("shubhashis",38,"no","male","india",9);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("shreshta",48,"yes","male","india",10);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("hari",59,"yes","female","india",11);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("kirtana",65,"yes","male","india",12);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("vanca",25,"yes","male","india",13);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("chumban",29,"yes","female","india",14);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sushil",46,"no","male","india",15);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("matsendra",31,"no","female","india",16);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("salarjung",70,"yes","female","india",17);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("swapnil",50,"yes","female","india",18);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("saraswati",36,"yes","female","india",19);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("lalitchandra",43,"no","female","india",20);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("kamat",28,"no","male","india",21);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("kishori",59,"no","female","india",22);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("charu",45,"no","male","india",23);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("pankaja",30,"yes","male","india",24);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("basavaraj",51,"yes","male","india",25);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("balakrishna",60,"yes","female","india",26);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("janardan",60,"no","male","india",27);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("tukaram",56,"no","female","india",28);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("bankim",31,"no","male","india",29);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("parijat",45,"yes","female","india",30);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("udayasooriyan",30,"yes","female","india",31);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("faria",38,"no","female","india",32);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("adishree",25,"yes","female","india",33);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("nirupa",50,"no","male","india",34);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("manjari",65,"yes","male","india",35);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sohalia",68,"yes","male","india",36);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sahil",39,"yes","male","india",37);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("parvani",66,"no","male","india",38);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("pransukh",27,"no","male","india",39);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("nalinaksha",20,"no","female","india",40);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("arvinda",21,"yes","male","india",41);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("jyotika",43,"no","male","india",42);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("suchita",23,"yes","female","india",43);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("aalap",39,"no","male","india",44);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("nripendra",27,"yes","female","india",45);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("velan",41,"no","female","india",46);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("rati",50,"yes","male","india",47);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("palanivel",42,"yes","male","india",48);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sandhya",49,"no","male","india",49);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("niyati",48,"yes","female","india",50);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("arshia",29,"yes","female","india",51);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("vanajit",46,"no","male","india",52);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("lohitaksha",49,"yes","female","india",53);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("abhijvala",30,"yes","male","india",54);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("madhavilata",47,"no","male","india",55);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("arivumadhi",26,"yes","female","india",56);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("yogita",64,"no","male","india",57);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("upala",70,"yes","female","india",58);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("divyesh",62,"no","male","india",59);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("treya",27,"no","male","india",60);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("shankari",44,"yes","female","india",61);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("swayambhu",69,"yes","female","india",62);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("lokesh",62,"no","female","india",63);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("manik",40,"yes","female","india",64);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("ujas",65,"no","male","india",65);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("ektaa",23,"no","male","india",66);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("omprakash",60,"no","male","india",67);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sati",20,"yes","male","india",68);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("serena",45,"yes","male","india",69);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("krithi",37,"no","male","india",70);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("akshay",57,"yes","male","india",71);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("kalimohan",26,"yes","female","india",72);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("akroor",61,"no","male","india",73);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("gurcharan",31,"yes","female","india",74);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("gangadhar",67,"yes","female","india",75);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("jaipriya",60,"no","female","india",76);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("anand",69,"yes","female","india",77);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("nivritti",62,"yes","male","india",78);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("aniteja",28,"no","female","india",79);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("shabana",23,"yes","male","india",80);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("mahmud",39,"no","male","india",81);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("pran",33,"no","male","india",82);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("ramashray",27,"yes","male","india",83);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("shreeparna",22,"no","female","india",84);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("chandramohan",23,"no","female","india",85);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("stavita",62,"no","female","india",86);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("yuvaraj",26,"no","male","india",87);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sarala",63,"yes","female","india",88);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("renu",31,"no","male","india",89);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("umrao",53,"yes","female","india",90);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("rishi",32,"yes","female","india",91);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("omvati",36,"yes","male","india",92);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("aslesha",33,"no","female","india",93);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("adhira",47,"no","female","india",94);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("vrajamohan",41,"yes","male","india",95);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("nakul",40,"yes","female","india",96);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("lokesh",67,"no","male","india",97);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("anwar",34,"no","female","india",98);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("sajal",36,"no","female","india",99);
-INSERT INTO `owners` (`name`,`age`,`married`,`gender`,`nationality`,`apartment_number`) VALUES ("martand",54,"no","male","india",100);
-
 DROP TABLE IF EXISTS `apartments`;
-
 CREATE TABLE `apartments` (
   `name` varchar(255) default NULL,
-  `carpet_area` varchar(100),
-  `num_of_rooms` mediumint default NULL,
-  `sold` varchar(255) default NULL,
+  `carpet_area` mediumint default NULL,
+  `number_of_rooms` mediumint default NULL,
   `floor` mediumint default NULL,
   `apartment_number` mediumint
 );
-
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("yoganand","888.2238317883",4,"yes",7,1);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("upala","885.7126847184",1,"yes",0,2);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("jaisukh","948.1813899538",1,"yes",8,3);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("jaigath","940.957657401",2,"no",10,4);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("jui","915.6668563553",3,"no",19,5);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("akanksha","895.3830233119",3,"yes",1,6);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("subramani","878.9176177698",4,"yes",16,7);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("izhar","886.4040854284",4,"no",1,8);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("deep","881.5016973221",2,"no",20,9);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("nitya","905.851627101",1,"no",3,10);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("badal","919.4795879934",4,"yes",7,11);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kakali","897.1707150316",4,"yes",10,12);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("leena","904.6755285307",1,"no",7,13);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("vajra","868.5287271655",2,"yes",14,14);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("vilasini","925.2555207046",1,"no",17,15);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("madhura","865.643218386",2,"yes",4,16);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sambhddha","899.1036082145",2,"yes",14,17);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("madanapal","912.6015225409",2,"yes",11,18);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("ekadhana","889.414268856",1,"no",3,19);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("reshma","900.9839833233",4,"yes",14,20);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("chellam","886.515265551",3,"no",12,21);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sanjith","844.7630917066",4,"no",4,22);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("bratindra","897.6985875002",3,"no",13,23);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("khushal","910.4750051442",4,"yes",18,24);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("vedmohan","872.8153434326",1,"no",3,25);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("purvaja","872.7919557495",3,"yes",1,26);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("prasata","933.2189953096",2,"yes",14,27);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("jaishankar","918.0961998289",3,"yes",2,28);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sugreev","896.6041650787",4,"no",15,29);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("ahilan","892.6448313659",2,"yes",20,30);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("mausumi","882.5087968586",1,"no",12,31);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("mandar","879.7884837963",4,"no",0,32);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kapish","916.0970180615",2,"no",12,33);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("vaikunth","923.9537116877",3,"no",15,34);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("surotama","927.7072117335",4,"no",19,35);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("ilavenil","897.6948359656",2,"yes",14,36);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("markandeya","892.6911783603",1,"yes",9,37);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("dayanita","881.8355320193",2,"yes",10,38);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sai","891.2929838425",3,"yes",4,39);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("shashank","944.1824702944",3,"no",2,40);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("drupad","869.2277148406",3,"yes",19,41);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("tehzeeb","934.0741756714",1,"no",14,42);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("keyur","882.1546205378",2,"yes",19,43);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("natwar","911.5345187592",1,"yes",10,44);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("timin","896.4318548183",1,"no",0,45);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("vithala","880.2160201572",2,"yes",0,46);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("nipun","922.6926478485",4,"yes",14,47);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("gajalakshmi","892.1388722574",3,"yes",14,48);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("ashakiran","897.3816962344",2,"yes",1,49);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("chandrakala","913.3255322756",2,"no",16,50);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("teerthankar","919.1021418826",4,"yes",4,51);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("mriganka","902.522435529",1,"yes",15,52);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("shambhu","891.0182767917",3,"no",12,53);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("alaka","910.7287005555",1,"yes",3,54);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kundan","873.3903144556",3,"yes",7,55);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("ethaha","922.7443595431",2,"no",9,56);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sajan","854.7018817613",4,"no",20,57);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("govindi","910.6827658209",1,"no",15,58);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("jalil","936.293265548",4,"yes",9,59);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("devdutta","882.3269041613",4,"yes",11,60);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("namya","892.3974388694",4,"no",1,61);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("dharmachandra","876.4559980571",3,"no",13,62);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("chanda","906.6240004235",4,"yes",19,63);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("taru","886.0564682668",2,"no",20,64);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("suhasini","889.2234406252",3,"yes",13,65);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("dev","923.8210302799",2,"yes",16,66);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("mythily","899.9744723628",2,"yes",17,67);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("avani","885.9698602754",2,"no",9,68);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("shankhamala","906.7186698226",1,"yes",5,69);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("shameena","925.6633614598",1,"yes",2,70);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("shree","928.9733155352",2,"yes",7,71);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("jyotiprakash","913.9479484916",3,"yes",18,72);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("suranjana","921.8998033082",4,"yes",4,73);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kalika","911.9644704543",1,"yes",15,74);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("subramani","913.2627737169",4,"no",19,75);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("manmayi","888.480556252",4,"yes",19,76);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("hansaraj","875.7665319539",3,"yes",19,77);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("saras","912.3916790094",2,"yes",15,78);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sadaf","857.5722339318",2,"no",11,79);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("girik","897.0237428445",4,"yes",19,80);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kush","882.8751653021",1,"yes",18,81);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("indukanta","934.1522671386",3,"no",4,82);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("tvarika","869.6977853164",1,"no",0,83);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("hakesh","879.6560683481",3,"yes",5,84);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sanyog","904.0359532436",3,"yes",13,85);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sangita","876.6987414485",3,"yes",4,86);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kantimoy","851.2685053711",2,"yes",9,87);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("prem","872.3004459887",3,"no",4,88);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("anarghya","945.0183606915",2,"no",8,89);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("sushobhan","911.1307172744",3,"no",17,90);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("tarannum","869.59192664",4,"no",13,91);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("pritika","882.2014664257",1,"yes",11,92);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("gokul","915.3266236391",2,"yes",20,93);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("kanitha","887.290259262",2,"yes",14,94);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("devika","894.7107870813",1,"no",2,95);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("eshana","958.7258262765",1,"yes",16,96);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("subodh","888.5883005257",3,"yes",16,97);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("charulekha","965.4114424153",2,"yes",18,98);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("saroj","903.4081140205",4,"yes",11,99);
-INSERT INTO `apartments` (`name`,`carpet_area`,`num_of_rooms`,`sold`,`floor`,`apartment_number`) VALUES ("ujesh","845.0807894582",4,"no",3,100);
-
+INSERT INTO `apartments` (`name`,`carpet_area`,`number_of_rooms`,`floor`,`apartment_number`) VALUES ("sakshat",600,2,12,42);
+INSERT INTO `apartments` (`name`,`carpet_area`,`number_of_rooms`,`floor`,`apartment_number`) VALUES ("sriram",900,3,20,10);
+INSERT INTO `apartments` (`name`,`carpet_area`,`number_of_rooms`,`floor`,`apartment_number`) VALUES ("arnav",450,1,3,5);
+INSERT INTO `apartments` (`name`,`carpet_area`,`number_of_rooms`,`floor`,`apartment_number`) VALUES ("karthik",900,3,18,11);
 DROP TABLE IF EXISTS `payments`;
-
 CREATE TABLE `payments` (
   `name` varchar(255) default NULL,
-  `payment_amount` varchar(100) default NULL,
-  `paid` varchar(255) default NULL,
-  `number_of_installments` mediumint default NULL,
-  `next_due_date` varchar(255)
+  `payment` mediumint default NULL,
+  `amount_paid` mediumint default NULL,
+  `due_date` varchar(255)
 );
-
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("jagadhidh","rs.42,55,723","no",6,"april 21st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("isai","rs.48,81,519","no",2,"october 4th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("suchitra","rs.84,88,361","no",6,"october 24th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("mahtab","rs.00,16,521","yes",1,"december 3rd, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("dwipavati","rs.47,70,372","yes",4,"october 28th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("trisha","rs.11,60,407","yes",5,"april 12th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("budhil","rs.50,33,934","no",10,"october 17th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("neepa","rs.54,78,920","no",3,"february 9th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("unnati","rs.32,32,983","no",7,"december 18th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("arka","rs.80,02,518","yes",7,"december 3rd, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("vandana","rs.13,81,243","yes",9,"december 30th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sahib","rs.50,67,610","yes",1,"january 30th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("hita","rs.37,73,002","yes",9,"december 17th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("satyasheel","rs.72,76,503","yes",4,"april 6th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("milana","rs.54,05,526","yes",5,"january 2nd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sukumar","rs.92,91,197","no",6,"april 17th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("thooyavan","rs.77,89,972","yes",4,"april 14th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ivy","rs.39,19,914","no",4,"june 2nd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("purujit","rs.12,88,688","yes",9,"september 15th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("vishwamitra","rs.11,09,182","no",10,"march 2nd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kaumudi","rs.77,40,858","yes",9,"february 3rd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("tarika","rs.05,23,429","no",4,"september 14th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("shobhana","rs.88,90,941","no",10,"september 27th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("jhilmil","rs.67,35,947","yes",1,"april 28th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("animish","rs.96,75,398","yes",10,"december 7th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("abhihita","rs.25,34,775","no",9,"may 2nd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kunjana","rs.33,34,715","yes",2,"january 11th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("arnav","rs.60,78,372","yes",8,"december 21st, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("smarajit","rs.95,07,358","yes",2,"june 11th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("mullai","rs.58,82,359","yes",3,"september 9th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("chitrarath","rs.07,09,396","no",5,"june 5th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("bhanu","rs.68,71,209","yes",7,"may 18th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ibhya","rs.05,82,204","no",10,"july 28th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sumanta","rs.96,79,574","no",5,"april 11th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kishore","rs.02,04,452","no",8,"june 7th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("panmoli","rs.17,98,659","yes",10,"april 21st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("maharth","rs.73,33,955","no",4,"july 8th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ulka","rs.46,11,158","no",8,"november 18th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sadiq","rs.14,57,838","yes",4,"may 9th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("chandrima","rs.27,05,604","yes",8,"december 3rd, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("jaheel","rs.31,74,367","yes",3,"august 22nd, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("thirumalai","rs.16,38,185","no",7,"march 17th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kanchi","rs.66,75,197","yes",5,"march 28th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("eka","rs.90,78,896","yes",7,"may 30th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ashoka","rs.88,58,844","yes",4,"january 3rd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("prafulla","rs.78,68,256","yes",4,"june 13th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kamalika","rs.28,85,264","no",8,"september 20th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("purva","rs.23,80,723","yes",9,"may 9th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("anuttam","rs.25,41,594","yes",5,"january 6th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("narmada","rs.94,28,721","yes",7,"february 5th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kayalvili","rs.37,35,309","yes",4,"march 9th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("jyotsna","rs.05,30,665","yes",1,"may 3rd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("tarachand","rs.07,89,168","no",1,"june 12th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kripa","rs.87,69,933","yes",10,"february 16th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("madhu","rs.35,22,694","yes",4,"june 5th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("lakshmibanta","rs.09,95,704","no",10,"march 28th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("prachur","rs.34,25,112","no",1,"december 4th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ilamurugu","rs.90,08,183","yes",7,"january 12th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("tajdar","rs.34,32,567","no",10,"june 26th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("chandana","rs.85,02,939","yes",1,"september 4th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("balbir","rs.50,70,852","yes",7,"may 3rd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("apeksha","rs.43,19,162","yes",4,"may 4th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("lalita","rs.11,42,164","no",6,"september 26th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("nirijhar","rs.34,58,988","no",8,"october 11th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ishika","rs.31,97,414","no",8,"january 8th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kartikeya","rs.61,32,098","no",7,"may 18th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("pragyawati","rs.14,83,193","no",4,"december 28th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sachika","rs.16,12,298","no",4,"january 31st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("rohit","rs.57,37,230","yes",1,"january 23rd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sarat","rs.22,68,980","no",9,"january 4th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("reshma","rs.41,42,298","yes",8,"january 7th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("dwijesh","rs.43,11,630","yes",4,"march 17th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("chittaprasad","rs.49,74,418","no",10,"february 18th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("neelkamal","rs.75,19,593","no",4,"october 26th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("dilber","rs.78,98,061","no",3,"april 6th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("acchindra","rs.69,09,210","yes",10,"november 30th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("rasik","rs.42,78,647","no",9,"march 1st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kananbala","rs.14,57,849","yes",1,"december 14th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("manisha","rs.41,72,134","no",6,"october 12th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kaunteya","rs.01,43,834","no",9,"august 29th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("manjusri","rs.49,93,208","no",8,"may 18th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("saket","rs.17,73,856","yes",2,"august 30th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sudip","rs.60,65,555","no",9,"march 5th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sudhamayi","rs.08,53,788","yes",1,"june 6th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("pradnesh","rs.59,40,880","no",3,"april 21st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("shampa","rs.84,51,380","yes",7,"march 2nd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("mahaniya","rs.08,21,494","yes",6,"august 20th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("devadas","rs.49,46,358","no",9,"november 21st, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("anandamayi","rs.87,44,376","yes",3,"march 22nd, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("tuhin","rs.44,26,836","no",1,"november 18th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("bhuvana","rs.23,61,784","no",10,"december 19th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("ganaka","rs.64,76,450","no",2,"june 10th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("dinkar","rs.38,84,139","yes",1,"november 22nd, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("wamil","rs.90,23,924","yes",6,"december 22nd, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("tarik","rs.77,58,556","no",4,"july 1st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("sarfaraz","rs.07,50,248","no",2,"july 29th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("anoop","rs.31,03,294","yes",9,"june 27th, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("kaushika","rs.74,63,385","no",10,"may 21st, 2022");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("bipin","rs.98,35,947","yes",8,"september 24th, 2021");
-INSERT INTO `payments` (`name`,`payment_amount`,`paid`,`number_of_installments`,`next_due_date`) VALUES ("punit","rs.94,50,495","no",1,"november 5th, 2021");
+INSERT INTO `payments` (`name`,`payment`,`amount_paid`,`due_date`) VALUES ("sakshat",2000000,500000,"jan 1, 2022");
+INSERT INTO `payments` (`name`,`payment`,`amount_paid`,`due_date`) VALUES ("sriram",6000000,1000000,"sep 12, 2021");
+INSERT INTO `payments` (`name`,`payment`,`amount_paid`,`due_date`) VALUES ("arnav",1000000,800000,"dec 20, 2021");
+INSERT INTO `payments` (`name`,`payment`,`amount_paid`,`due_date`) VALUES ("karthik",5000000,200000,"mar 2, 2022");
+DROP TABLE IF EXISTS `installments`;
+CREATE TABLE `installments` (
+  `name` varchar(255) default NULL,
+  `installment_amount` mediumint default NULL
+);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("sakshat",100000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("sakshat",300000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("sakshat",100000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("sriram",400000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("sriram",600000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("arnav",500000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("arnav",100000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("arnav",100000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("arnav",100000);
+INSERT INTO `installments` (`name`,`installment_amount`) VALUES ("karthik",200000);

@@ -179,6 +179,7 @@ class CategoryInitializer:
         info=[re.findall(r'`[^`]*` ',x) for x in info]
         info=[[y[1:-2] for y in x] for x in info]
         self.table_info=dict([(x[0],x[1:]) for x in info])
+        print(self.table_info)
         self.tables=list(self.table_info.keys())
     
     def find_avg_cat_vector(self, cat):
@@ -197,15 +198,15 @@ class CategoryInitializer:
         table_cats=[self.level2_map[firstWord_map[x]] for x in self.tables]
 
         self.cat_descr_map={
-            'owners':[
-                'owner','customer','person','apartment','gender','family', 'sold'
-            ],
             'apartments':[
                 'apartment','room','carpet', 'area', 'sold', 'floor', 'house', 'home', 'building', 'housing'
             ],
             'payments':[
-                'payment','amount','paid', 'installment', 'due', 'money', 'finance', 'buy'
+                'payment','amount','paid', 'due', 'money', 'finance', 'buy'
             ],
+            'installments':[
+                'installment', 'paid'
+            ]
         }
 
         for cat in self.cat_descr_map:
@@ -418,9 +419,9 @@ class Model:
         schema_content=schema_file.read()
 
         level2_map={
-            'owners':'owners',
             'apartments':'apartments',
             'payments':'payments',
+            'installments': 'installments'
         }
 
         type_cats = ['int', 'char', 'text', 'datetime', 'decimal']

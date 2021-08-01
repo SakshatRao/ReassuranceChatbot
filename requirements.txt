@@ -10,3 +10,4 @@ tensorflow
 # pip install -U sentence-transformers
 # sudo apt-get install mysql-server
 mysql-connector-python
+odfpy

@@ -1,3 +1,4 @@
+from matplotlib.pyplot import plot
 from question_similarity import FAQ_Answering
 faq_answerer = FAQ_Answering()
 
@@ -6,15 +7,16 @@ window=Tk()
 
 from mysql import connector
 
+from construction_updates.plot_dashboard import plot_dashboard
+
 username = ""
 
 def submit_func():
-    question = txtfld.get()
+    question = txtfld.get().lower()
     txtfld.delete(0, END)
     user_texts.append(question)
 
     def check_personal(ques):
-        is_personal = False
         alpha_ques = ''.join([x for x in ques if (x.isalpha() or x==' ')]).lower()
         for personal_word in ['my', 'me', 'myself', 'mine', 'i']:
             if(personal_word in alpha_ques.split(' ')):
@@ -43,7 +45,7 @@ def submit_func():
     if(check_personal(question) == True):
 
         question = process_personal_ques(question, username)
-        print(question)
+        print(f"\n\n\nProcessed Question: {question}")
 
         with open('./question_sql.txt', 'w') as write_file:
             write_file.write(question + "%")
@@ -55,6 +57,8 @@ def submit_func():
                     break
         with open('./question_sql.txt', 'r') as read_file:
             answer = read_file.read()[:-1]
+        answer = answer.split('\n')[0]
+        print(f"SQL Query: {answer}")
         
         if(len(answer.strip()) == 0):
             answer = "Sorry! No SQL query formed!"
@@ -66,7 +70,6 @@ def submit_func():
                 database='sample_database',
             )
             mycursor = mydb.cursor()
-            print(answer)
             mycursor.execute(answer)
             final_answer = mycursor.fetchall()
             if(len(final_answer) == 0):
@@ -90,6 +93,9 @@ def change_user():
     global username
     username = name_txtfld.get()
     window.update()
+
+def construction_dashboard():
+    plot_dashboard()
 
 chatbot_texts = ['Hi there, I am your Reassurance Chatbot!']
 chatbot_labels = []
@@ -125,6 +131,9 @@ name_txtfld.place(x=100, y=450, width=200)
 
 name_btn=Button(window, text="Change User", fg='blue', command=change_user)
 name_btn.place(x=0, y=450)
+
+construction_btn=Button(window, text="Construction Dashboard", fg='blue', command=construction_dashboard)
+construction_btn.place(x=750, y=450)
 
 window.title('Reassurance Chatbot')
 window.geometry("1000x500+10+20")

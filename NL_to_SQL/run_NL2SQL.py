@@ -7,7 +7,7 @@ while(1):
         with open('../question_sql.txt', 'r') as read_file:
             read_content = read_file.read()
             if((len(read_content) > 0) and ("%" == read_content[-1])):
-                print("Found!")
+                print("\n\n\nFound!")
                 break
     with open('../question_sql.txt', 'r') as read_file:
         text = read_file.read()[:-1]
