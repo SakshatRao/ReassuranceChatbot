@@ -1,0 +1,31 @@
+Create two environments, one with Python2 (for running SQLNet) & one with Python3
+
+
+
+
+
+For python2, pip install these packages -
+1. torch
+2. benepar
+3. tensorflow
+
+Use this command as well -
+conda install -c conda-forge records
+
+and install whatever other libraries are asked to be installed
+
+
+
+
+
+
+
+For python3, pip install these packages -
+mysql-connector-python
+odfpy
+
+Use these commands as well -
+pip install -U sentence-transformers
+sudo apt-get install mysql-server
+
+Set-up a MySQL server on local computer as well
